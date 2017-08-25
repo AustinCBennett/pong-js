@@ -73,12 +73,12 @@ Ball.prototype.render = function() {
     context.fill();
 };
 
-// Build objects and update render function
+// Build objects:
 var player = new Player();
 var computer = new Computer();
 var ball = new Ball(200, 300);
 
-// Render background
+// Render background:
 var render = function() {
     context.fillStyle = "#000000";
     context.fillRect(0, 0, width, height);
@@ -87,7 +87,7 @@ var render = function() {
     ball.render();
 };
 
-// Animations
+// Animations:
 var update = function() {
     player.update();
     computer.update(ball);
@@ -135,7 +135,7 @@ Ball.prototype.update = function(paddle1, paddle2) {
     }
 };
 
-// Controls
+// Controls:
 
 var keysDown = {};
 
